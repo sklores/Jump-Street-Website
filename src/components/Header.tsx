@@ -9,7 +9,7 @@ export function Header() {
           {siteContent.brand.shortName}
         </Link>
 
-        <div className="absolute left-1/2 -translate-x-1/2 font-bold uppercase text-sm md:text-base tracking-[0.14em] text-neutral-800 after:content-[''] after:block after:mx-auto after:mt-1 after:h-px after:w-12 after:bg-neutral-300">
+        <div className="absolute left-1/2 -translate-x-1/2 font-bold uppercase text-sm md:text-base tracking-[0.06em] text-neutral-900 after:content-[''] after:block after:mx-auto after:mt-1 after:h-px after:w-10 after:bg-neutral-500">
           RETAIL ADVISORY
         </div>
 

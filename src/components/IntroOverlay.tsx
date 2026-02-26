@@ -41,7 +41,7 @@ export default function IntroOverlay() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f3efe7]">
       <img
-        src="/jump-street-logo.png"
+        src="/Jump%20Street%20Logo.png"
         alt="Jump Street"
         className="w-[220px] md:w-[280px] h-auto object-contain"
       />

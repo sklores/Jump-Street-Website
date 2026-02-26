@@ -7,10 +7,12 @@ export default function HomePage() {
     <main>
       <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 md:px-10 md:py-24">
         <h1 className="max-w-5xl font-display text-5xl font-bold uppercase leading-[0.95] tracking-wide text-charcoal md:text-7xl">
-          {siteContent.hero.headline}
+          {siteContent.hero.headlineLineOne}{' '}
+          <span className="inline-block rounded-full border border-accent px-4 py-1 text-accent">
+            {siteContent.hero.headlineLineTwo}
+          </span>
         </h1>
-        <p className="max-w-2xl text-lg leading-relaxed text-charcoal/85">{siteContent.hero.subheadline}</p>
-        <p className="max-w-3xl text-base text-charcoal/80">{siteContent.hero.supportingLine}</p>
+        <p className="max-w-3xl text-lg leading-relaxed text-charcoal/85">{siteContent.hero.subheadline}</p>
         <div className="flex flex-wrap items-center gap-6">
           <Link
             href={siteContent.hero.primaryCta.href}
@@ -26,7 +28,7 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 py-16 md:px-10">
         <div className="mb-8 h-px bg-line" />
-        <h2 className="mb-8 font-display text-3xl font-bold uppercase tracking-wide">Retail Advisory Services</h2>
+        <h2 className="mb-8 font-display text-3xl font-bold uppercase tracking-wide">SERVICES</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {siteContent.servicesPreview.map((service) => (
             <article key={service.title} className="rounded-2xl border border-line bg-cream p-8">

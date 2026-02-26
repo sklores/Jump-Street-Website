@@ -15,31 +15,27 @@ export const siteContent = {
     { label: 'Instagram', href: '#' },
   ],
   hero: {
-    headline: 'Owner-Side Representation for Operators Serious About Brick-and-Mortar Success',
+    headlineLineOne: 'FROM LEASE TO OPENING,',
+    headlineLineTwo: 'WE REPRESENT THE OWNER.',
     subheadline:
-      'We guide retail and hospitality operators from concept to opening — protecting you from bad leases, blown budgets, and costly construction surprises.',
-    supportingLine: 'Evaluate opportunities, protect owner interests, and guide projects from lease to opening.',
+      'Jump Street acts on the owner’s side — aligning strategy, real estate, and buildouts to protect your deal, your budget, and your timeline.',
     primaryCta: { label: 'Start a Feasibility Review', href: '/contact' },
     secondaryCta: { label: 'Learn How We Work', href: '#how-engagements-work' },
   },
   servicesPreview: [
     {
-      title: 'Pre-Lease Risk Protection',
-      bullets: [
-        'Site evaluation & risk review',
-        'Lease term assessment & red-flag analysis',
-        'Financial feasibility sanity check',
-      ],
+      title: 'STRATEGY',
+      bullets: ['Feasibility review', 'Concept & scope validation', 'Budget validation', 'Execution roadmap'],
       href: '/services',
     },
     {
-      title: 'Pre-Construction Budget Protection',
-      bullets: ['Scope validation', 'GC bid comparison & pressure testing', 'Budget accountability planning'],
+      title: 'REAL ESTATE',
+      bullets: ['Site selection', 'Lease review & risk identification', 'Deal structure alignment'],
       href: '/services',
     },
     {
-      title: 'Owner-Side Oversight & Execution Guardrails',
-      bullets: ['Construction milestone coordination', 'Timeline accountability', 'Contractor & permit alignment'],
+      title: 'BUILDOUTS',
+      bullets: ['Owner-side oversight', 'GC coordination', 'Budget accountability', 'Timeline protection'],
       href: '/services',
     },
   ],
@@ -76,9 +72,9 @@ export const siteContent = {
   whoWeWorkWith: {
     title: 'Who We Work With',
     body:
-      'Jump Street partners with founders and operators actively pursuing a real retail or hospitality location and who want aligned owner-side representation from feasibility through opening.',
+      'Jump Street works with founders and operators actively pursuing a retail or hospitality location who want owner-side representation from feasibility through opening.',
     qualifier:
-      'Not a fit for early idea exploration or casual “just browsing” conversations — we work with operators ready to commit to execution and results.',
+      'Not a fit for early idea exploration or casual browsing conversations — we partner with operators ready to commit to execution and results.',
   },
   process: {
     title: 'How Engagements Work',

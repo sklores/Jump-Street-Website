@@ -9,12 +9,8 @@ export function Header() {
           {siteContent.brand.shortName}
         </Link>
 
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <img
-            src="/jump-street-icon-crop.png"
-            alt="Jump Street icon"
-            className="h-[32px] md:h-[40px] w-auto object-contain"
-          />
+        <div className="absolute left-1/2 -translate-x-1/2 text-sm md:text-base tracking-wide font-medium uppercase text-charcoal/75">
+          RETAIL ADVISORY
         </div>
 
         <nav aria-label="Main navigation">

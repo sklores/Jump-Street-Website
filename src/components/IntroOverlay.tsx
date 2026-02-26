@@ -27,13 +27,18 @@ export default function IntroOverlay() {
     if (seen) return;
 
     setShow(true);
+    document.body.style.overflow = "hidden";
 
     const t = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("introSeen", "true");
-    }, 2500);
+      document.body.style.overflow = "";
+    }, 3200);
 
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      document.body.style.overflow = "";
+    };
   }, []);
 
   if (!show) return null;
@@ -43,7 +48,7 @@ export default function IntroOverlay() {
       <img
         src="/Jump%20Street%20Logo.png"
         alt="Jump Street"
-        className="w-[300px] md:w-[420px] h-auto object-contain"
+        className="w-[360px] md:w-[560px] h-auto object-contain"
       />
     </div>
   );

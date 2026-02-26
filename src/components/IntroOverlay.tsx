@@ -6,6 +6,23 @@ export default function IntroOverlay() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    const introOverride = new URLSearchParams(window.location.search).get("intro");
+
+    if (introOverride === "0") {
+      setShow(false);
+      return;
+    }
+
+    if (introOverride === "1") {
+      setShow(true);
+
+      const t = setTimeout(() => {
+        setShow(false);
+      }, 1400);
+
+      return () => clearTimeout(t);
+    }
+
     const seen = sessionStorage.getItem("introSeen");
     if (seen) return;
 

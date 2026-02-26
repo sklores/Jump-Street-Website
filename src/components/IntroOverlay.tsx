@@ -1,51 +1,31 @@
-'use client';
+import { useEffect, useState } from "react";
 
-import { useEffect, useState } from 'react';
-
-const INTRO_KEY = 'jump-street-intro-seen';
-
-export function IntroOverlay() {
-  const [visible, setVisible] = useState(false);
-  const [phase, setPhase] = useState<'hidden' | 'visible' | 'fading'>('hidden');
+export default function IntroOverlay() {
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const seen = sessionStorage.getItem(INTRO_KEY);
+    const seen = sessionStorage.getItem("introSeen");
+    if (seen) return;
 
-    if (seen) {
-      return;
-    }
+    setShow(true);
 
-    setVisible(true);
+    const t = setTimeout(() => {
+      setShow(false);
+      sessionStorage.setItem("introSeen", "true");
+    }, 1400);
 
-    const fadeIn = window.setTimeout(() => setPhase('visible'), 40);
-    const hold = window.setTimeout(() => setPhase('fading'), 1050);
-    const finish = window.setTimeout(() => {
-      setVisible(false);
-      sessionStorage.setItem(INTRO_KEY, 'true');
-    }, 1550);
-
-    return () => {
-      window.clearTimeout(fadeIn);
-      window.clearTimeout(hold);
-      window.clearTimeout(finish);
-    };
+    return () => clearTimeout(t);
   }, []);
 
-  if (!visible) {
-    return null;
-  }
-
-  const opacityClass = phase === 'visible' ? 'opacity-100' : phase === 'fading' ? 'opacity-0' : 'opacity-0';
+  if (!show) return null;
 
   return (
-    <div
-      aria-hidden
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-cream transition-opacity duration-500 ${opacityClass}`}
-    >
-      <div className="text-center">
-        {/* TODO: Replace with actual logo file path once available, e.g. /jump-street-logo.svg */}
-        <span className="font-display text-4xl font-bold tracking-[0.4em] text-charcoal">JUMP STREET</span>
-      </div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f3efe7]">
+      <img
+        src="/jump-street-logo.png"
+        alt="Jump Street"
+        className="w-[220px] md:w-[280px] h-auto object-contain"
+      />
     </div>
   );
 }

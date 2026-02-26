@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 export default function IntroOverlay() {
@@ -8,13 +10,18 @@ export default function IntroOverlay() {
     if (seen) return;
 
     setShow(true);
+    document.body.style.overflow = "hidden";
 
     const t = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("introSeen", "true");
-    }, 1400);
+      document.body.style.overflow = "";
+    }, 3200);
 
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      document.body.style.overflow = "";
+    };
   }, []);
 
   if (!show) return null;
@@ -22,9 +29,9 @@ export default function IntroOverlay() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#f3efe7]">
       <img
-        src="/jump-street-logo.png"
+        src="/Jump%20Street%20Logo.png"
         alt="Jump Street"
-        className="w-[220px] md:w-[280px] h-auto object-contain"
+        className="w-[360px] md:w-[560px] h-auto object-contain"
       />
     </div>
   );

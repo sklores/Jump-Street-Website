@@ -15,43 +15,96 @@ export const siteContent = {
     { label: 'Instagram', href: '#' },
   ],
   hero: {
-    headlineStart: 'From deal strategy to site delivery,',
-    highlightedPhrase: 'we keep projects moving.',
+    headlineLineOne: 'FROM LEASE TO OPENING,',
+    headlineLineTwo: 'WE REPRESENT THE OWNER.',
     subheadline:
-      'Jump Street partners with owners, operators, and investors to evaluate opportunities, manage risk, and execute with precision.',
-    primaryCta: { label: 'Start a Project', href: '/contact' },
-    secondaryCta: { label: 'View Work', href: '/work' },
+      'Jump Street acts on the owner’s side — aligning strategy, real estate, and buildouts to protect your deal, your budget, and your timeline.',
+    primaryCta: { label: 'Start a Feasibility Review', href: '/contact' },
+    secondaryCta: { label: 'Learn How We Work', href: '#how-engagements-work' },
   },
   servicesPreview: [
     {
-      title: 'Commercial Real Estate',
-      bullets: [
-        'Site selection and market underwriting',
-        'Lease, buy, and reposition advisory',
-        'Portfolio strategy for growth and efficiency',
-      ],
+      title: 'STRATEGY',
+      bullets: ['Feasibility review', 'Concept & scope validation', 'Budget validation', 'Execution roadmap'],
       href: '/services',
     },
     {
-      title: 'Construction Services',
-      bullets: [
-        'Preconstruction budgeting and scheduling',
-        'General contracting and owner representation',
-        'Renovation, tenant improvement, and closeout',
-      ],
+      title: 'REAL ESTATE',
+      bullets: ['Site selection', 'Lease review & risk identification', 'Deal structure alignment'],
+      href: '/services',
+    },
+    {
+      title: 'BUILDOUTS',
+      bullets: ['Owner-side oversight', 'GC coordination', 'Budget accountability', 'Timeline protection'],
       href: '/services',
     },
   ],
-  featuredWork: [
-    { title: 'Riverside Commerce Center', location: 'Nashville, TN' },
-    { title: 'Maple District Buildout', location: 'Charlotte, NC' },
-    { title: 'Harbor Point Reposition', location: 'Tampa, FL' },
+  selectedWork: [
+    {
+      name: 'Lakeside Retail Launch',
+      type: 'Retail',
+      location: 'Austin, TX',
+      role: 'Owner-side representation',
+      outcome: 'Avoided costly lease terms and held budget through permitting.',
+    },
+    {
+      name: 'Harbor Hospitality Buildout',
+      type: 'Hospitality',
+      location: 'Charleston, SC',
+      role: 'Owner’s rep',
+      outcome: 'Aligned contractor scope early and opened on the committed timeline.',
+    },
+    {
+      name: 'Summit Medical Tenant Fit-Out',
+      type: 'Medical',
+      location: 'Nashville, TN',
+      role: 'Lease support',
+      outcome: 'Flagged risk in lease language and protected owner flexibility at turnover.',
+    },
+    {
+      name: 'Midtown Flagship Rollout',
+      type: 'Retail',
+      location: 'Charlotte, NC',
+      role: 'Owner-side representation',
+      outcome: 'Kept decision-makers aligned and prevented schedule drift during approvals.',
+    },
   ],
-  process: ['Evaluate', 'Plan', 'Execute'],
+  whoWeWorkWith: {
+    title: 'Who We Work With',
+    body:
+      'Jump Street works with founders and operators actively pursuing a retail or hospitality location who want owner-side representation from feasibility through opening.',
+    qualifier:
+      'Not a fit for early idea exploration or casual browsing conversations — we partner with operators ready to commit to execution and results.',
+  },
+  process: {
+    title: 'How Engagements Work',
+    steps: [
+      {
+        title: 'Feasibility & Risk Review',
+        detail: 'Define scope, hazards, and alignment',
+      },
+      {
+        title: 'Structured Engagement',
+        detail: 'Fixed scope agreement, clear deliverables',
+      },
+      {
+        title: 'Owner-Side Oversight',
+        detail: 'Coordinate team, protect budget, track milestones',
+      },
+    ],
+  },
+  testimonials: {
+    title: 'What Operators Say',
+    quotes: [
+      '“Steven helped us avoid a six-figure lease mistake and kept the build on schedule. Worth every dollar.” — Client Name, Brand / City',
+      '“Jump Street protected us from scope creep and kept everyone accountable from lease through opening day.” — Client Name, Brand / City',
+    ],
+  },
   proofStrip: ['Licensed', 'Insured', 'Operator-led'],
   finalCta: {
-    title: 'Need a partner who can move from vision to delivery?',
-    action: { label: 'Talk to Jump Street', href: '/contact' },
+    title: 'Serious about opening the right location with owner-side protection?',
+    action: { label: 'Start a Feasibility Review', href: '/contact' },
+    secondaryAction: { label: 'Book Owner-Side Strategy Call', href: '/contact' },
   },
   servicesPage: {
     intro:

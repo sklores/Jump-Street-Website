@@ -13,9 +13,19 @@ export default function ContactPage() {
         <aside className="rounded-2xl border border-line p-8">
           <h2 className="font-display text-xl font-bold uppercase tracking-wide">Direct Contact</h2>
           <ul className="mt-6 space-y-4 text-sm text-charcoal/80">
-            <li>Email: {siteContent.contactPage.direct.email}</li>
-            <li>Phone: {siteContent.contactPage.direct.phone}</li>
-            <li>Office: {siteContent.contactPage.direct.office}</li>
+            <li>
+              Email:{' '}
+              <a href={`mailto:${siteContent.contactPage.direct.email}`}>{siteContent.contactPage.direct.email}</a>
+            </li>
+            <li>
+              Phone:{' '}
+              <a href={`tel:${siteContent.contactPage.direct.phone}`}>{siteContent.contactPage.direct.phone}</a>
+            </li>
+            <li>
+              Office: {siteContent.contactPage.direct.officeLineOne}
+              <br />
+              {siteContent.contactPage.direct.officeLineTwo}
+            </li>
           </ul>
         </aside>
       </div>

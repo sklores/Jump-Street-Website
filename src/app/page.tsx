@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 md:px-10 md:py-24">
         <h1 className="max-w-5xl font-display text-5xl font-bold uppercase leading-[0.95] tracking-wide text-charcoal md:text-7xl">
           {siteContent.hero.headlineLineOne}{' '}
-          <span className="inline-block rounded-full border border-accent px-4 py-1 text-accent">
+          <span className="inline-block border-none p-0 text-accent md:rounded-full md:border md:border-accent md:px-8 md:py-4">
             {siteContent.hero.headlineLineTwo}
           </span>
         </h1>

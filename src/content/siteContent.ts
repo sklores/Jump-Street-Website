@@ -179,9 +179,10 @@ export const siteContent = {
   },
   contactPage: {
     direct: {
-      email: 'hello@jumpstreet.co',
-      phone: '(000) 000-0000',
-      office: '123 Main Street, Suite 200, Your City, ST',
+      email: 'steven@thejumpstreet.com',
+      phone: '202-770-7764',
+      officeLineOne: '8401 Mayland Drive',
+      officeLineTwo: 'Richmond, VA 23294',
     },
   },
 };
